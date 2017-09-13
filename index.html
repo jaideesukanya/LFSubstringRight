@@ -45,36 +45,7 @@
  	 <script type='text/javascript'>
 		 
    		 window.onload = function () {
-			 var formdata = <html>
-  <head>
-     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
-  	<link rel='stylesheet' href='https://unpkg.com/formiojs@latest/dist/formio.full.min.css'>
-  	<script src='https://unpkg.com/formiojs@latest/dist/formio.full.min.js'></script>
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  	<!--
-	  <script type="text/javascript" language="javascript" src="index.json"></script> -->
-  	
-  	<script> 
-		
-  		(new Formio('https://sbyqujankztvaxh.form.io/test')).loadForm().then(function(form){
-			Formio.createForm(document.getElementById('formio'), formdata);
-		});
- 	 </script>
- 	 <script type='text/javascript'>
-		 
-   		 window.onload = function () {
-			 var formdata = {"_id":"59b8a56ad6365c00073fcdc4","machineName":"sbyqujankztvaxh:testCalcForm","modified":"2017-09-13T09:21:52.458Z","title":"testCalcForm","display":"form","name":"testCalcForm","action":"https://lfazuretestapi.portal.azure-api.net/add","path":"test","project":"59b8a4bcf4e9c80007f66a7e","created":"2017-09-13T03:26:34.942Z","components":[{"properties":{"":""},"tags":[],"type":"textfield","conditional":{"show":"","when":null,"eq":""},"validate":{"required":false,"minLength":"","maxLength":"","pattern":"","custom":"","customPrivate":false},"clearOnHide":true,"hidden":false,"persistent":true,"unique":false,"protected":false,"defaultValue":"","multiple":false,"suffix":"","prefix":"","placeholder":"","key":"input1","label":"A:","inputMask":"","inputType":"text","tableView":true,"input":true,"lockKey":true},{"properties":{"":""},"tags":[],"type":"textfield","conditional":{"show":"","when":null,"eq":""},"validate":{"required":false,"minLength":"","maxLength":"","pattern":"","custom":"","customPrivate":false},"clearOnHide":true,"hidden":false,"persistent":true,"unique":false,"protected":false,"defaultValue":"","multiple":false,"suffix":"","prefix":"","placeholder":"","key":"input2","label":"B:","inputMask":"","inputType":"text","tableView":true,"input":true,"lockKey":true},{"lockKey":true,"properties":{"":""},"tags":[],"type":"textfield","conditional":{"show":"","when":null,"eq":""},"validate":{"required":false,"minLength":"","maxLength":"","pattern":"","custom":"","customPrivate":false},"clearOnHide":true,"hidden":false,"persistent":true,"unique":false,"protected":false,"defaultValue":"","multiple":false,"suffix":"","prefix":"","placeholder":"","key":"result","label":"Result","inputMask":"","inputType":"text","tableView":true,"input":true},{"type":"button","theme":"primary","disableOnInvalid":false,"action":"custom","block":false,"rightIcon":"","leftIcon":"","size":"md","key":"submit","tableView":false,"label":"Submit","input":true,"tags":[],"conditional":{"show":"","when":null,"eq":""},"properties":{"":""},"custom":"var url = 'https://lfazuretestapi.azure-api.net/LfSubstring/subStringRight?a=';\n\t\t\t\t\turl += submission.data.input1;\n\t\t\t\t\turl += '&b=';\n\t\t\t\t\turl += submission.data.input2;\n\t\t\t\t\t//alert('url = '+url);\n\t\t\t\t\t$.ajax({\n\t\t\t\t\t\turl: url,\n\t\t\t\t\t\tbeforeSend: function(xhrObj){\n\t\t\t\t\t\t\t//Request headers\n\t\t\t\t\t\t},\n\t\t\t\t\t\ttype: \"GET\"\n\t\t\t\t\t}).done(function(data){\n\t\t\t\t\t\t//console.log(data)\n\t\t\t\t\t\t//form.submission.data.result = data.result;\n\t\t\t\t\t\tvar value = JSON.stringify(data.Result);   \n\t\t\t\t\t\tconsole.log(value);   \n\t\t\t\t\t\tform.submission = { data: {result: value}};  \n\t\t\t\t\t}).fail(function(err){\n\t\t\t\t\t\tconsole.log(err)\n\t\t\t\t\t});"}],"owner":"59b100556d85560007c28261","submissionAccess":[],"access":[{"type":"read_all","roles":["59b8a4bcf4e9c80007f66a7f","59b8a4bcf4e9c80007f66a80","59b8a4bcf4e9c80007f66a81"]}],"tags":[],"type":"form"}
-      		Formio.createForm(document.getElementById('formio'), formdata);
-    	};
-  	</script>
-  </head>
-  <body>
-		<div id='formio'></div>
-  </body>
-</html>
-
-
-
+			 var formdata = {"_id":"59b8a56ad6365c00073fcdc4","machineName":"sbyqujankztvaxh:testCalcForm","modified":"2017-09-13T09:35:01.594Z","title":"testCalcForm","display":"form","name":"testCalcForm","action":"https://lfazuretestapi.portal.azure-api.net/add","path":"test","project":"59b8a4bcf4e9c80007f66a7e","created":"2017-09-13T03:26:34.942Z","components":[{"lockKey":true,"input":true,"tableView":true,"inputType":"text","inputMask":"","label":"A:","key":"input1","placeholder":"","prefix":"","suffix":"","multiple":false,"defaultValue":"","protected":false,"unique":false,"persistent":true,"hidden":false,"clearOnHide":true,"validate":{"customPrivate":false,"custom":"","pattern":"","maxLength":"","minLength":"","required":false},"conditional":{"eq":"","when":null,"show":""},"type":"textfield","tags":[],"properties":{"":""}},{"lockKey":true,"input":true,"tableView":true,"inputType":"text","inputMask":"","label":"B:","key":"input2","placeholder":"","prefix":"","suffix":"","multiple":false,"defaultValue":"","protected":false,"unique":false,"persistent":true,"hidden":false,"clearOnHide":true,"validate":{"customPrivate":false,"custom":"","pattern":"","maxLength":"","minLength":"","required":false},"conditional":{"eq":"","when":null,"show":""},"type":"textfield","tags":[],"properties":{"":""}},{"input":true,"tableView":true,"inputType":"text","inputMask":"","label":"Result","key":"result","placeholder":"","prefix":"","suffix":"","multiple":false,"defaultValue":"","protected":false,"unique":false,"persistent":true,"hidden":false,"clearOnHide":true,"validate":{"customPrivate":false,"custom":"","pattern":"","maxLength":"","minLength":"","required":false},"conditional":{"eq":"","when":null,"show":""},"type":"textfield","tags":[],"properties":{"":""},"lockKey":true},{"custom":"","properties":{"":""},"conditional":{"eq":"","when":null,"show":""},"tags":[],"input":true,"label":"Submit","tableView":false,"key":"submit","size":"md","leftIcon":"","rightIcon":"","block":false,"action":"custom","disableOnInvalid":false,"theme":"primary","type":"button"}],"owner":"59b100556d85560007c28261","submissionAccess":[],"access":[{"type":"read_all","roles":["59b8a4bcf4e9c80007f66a7f","59b8a4bcf4e9c80007f66a80","59b8a4bcf4e9c80007f66a81"]}],"tags":[],"type":"form"};
       		Formio.createForm(document.getElementById('formio'), formdata);
     	};
   	</script>
