@@ -32,7 +32,6 @@
 						//console.log(data)
 						//form.submission.data.result = data.result;
 						var value = JSON.stringify(data.Result); 
-						form.submission.data.result = data.result;
 						console.log(value);   
 						form.submission = { data: {result: value}};  
 					}).fail(function(err){
