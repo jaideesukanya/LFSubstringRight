@@ -4,43 +4,14 @@
   	<link rel='stylesheet' href='https://unpkg.com/formiojs@latest/dist/formio.full.min.css'>
   	<script src='https://unpkg.com/formiojs@latest/dist/formio.full.min.js'></script>
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  	<!--
-	  <script type="text/javascript" language="javascript" src="index.json"></script> -->
   	
-  	<script> 
-		
-
-
- 		 <!-- (new Formio('https://mgnnotdderlfrsk.form.io/add')).loadForm().then(function(form){ -->
-  		(new Formio('https://sbyqujankztvaxh.form.io/test')).loadForm().then(function(form){
-			Formio.createForm(document.getElementById('formio'), form).then(function(instance){
-				instance.on('submit', function(submission){
-					//var url = 'https://testapimgmtalfsasa1.azure-api.net/calc/add?a=';
-					//var url = 'https://lfazuretestapi.portal.azure-api.net/calc/add?a=';
-					var url = 'https://lfazuretestapi.azure-api.net/LfSubstring/subStringRight?a=';
-					url += submission.data.input1;
-					url += '&b=';
-					url += submission.data.input2;
-					//alert('url = '+url);
-					$.ajax({
-						url: url,
-						beforeSend: function(xhrObj){
-							//Request headers
-						},
-						type: "GET"
-					}).done(function(data){
-						//console.log(data)
-						//form.submission.data.result = data.result;
-						var value = JSON.stringify(data.Result); 
-						console.log(value);   
-						form.submission = { data: {result: value}};  
-					}).fail(function(err){
-						console.log(err)
-					});
-				});
-			});
-		});
- 	 </script>
+ 	 <script type='text/javascript'>
+		 
+   		 window.onload = function () {
+			 var formdata = {"_id":"59b8a56ad6365c00073fcdc4","machineName":"sbyqujankztvaxh:testCalcForm","modified":"2017-09-13T09:46:13.421Z","title":"testCalcForm","display":"form","name":"testCalcForm","action":"https://lfazuretestapi.portal.azure-api.net/add","path":"test","project":"59b8a4bcf4e9c80007f66a7e","created":"2017-09-13T03:26:34.942Z","components":[{"lockKey":true,"input":true,"tableView":true,"inputType":"text","inputMask":"","label":"A:","key":"input1","placeholder":"","prefix":"","suffix":"","multiple":false,"defaultValue":"","protected":false,"unique":false,"persistent":true,"hidden":false,"clearOnHide":true,"validate":{"customPrivate":false,"custom":"","pattern":"","maxLength":"","minLength":"","required":false},"conditional":{"eq":"","when":null,"show":""},"type":"textfield","tags":[],"properties":{"":""}},{"lockKey":true,"input":true,"tableView":true,"inputType":"text","inputMask":"","label":"B:","key":"input2","placeholder":"","prefix":"","suffix":"","multiple":false,"defaultValue":"","protected":false,"unique":false,"persistent":true,"hidden":false,"clearOnHide":true,"validate":{"customPrivate":false,"custom":"","pattern":"","maxLength":"","minLength":"","required":false},"conditional":{"eq":"","when":null,"show":""},"type":"textfield","tags":[],"properties":{"":""}},{"input":true,"tableView":true,"inputType":"text","inputMask":"","label":"Result","key":"result","placeholder":"","prefix":"","suffix":"","multiple":false,"defaultValue":"","protected":false,"unique":false,"persistent":true,"hidden":false,"clearOnHide":true,"validate":{"customPrivate":false,"custom":"","pattern":"","maxLength":"","minLength":"","required":false},"conditional":{"eq":"","when":null,"show":""},"type":"textfield","tags":[],"properties":{"":""},"lockKey":true},{"custom":"var url = 'https://lfazuretestapi.azure-api.net/LfSubstring/subStringRight?a=';\n\t\t\t\t\turl += submission.data.input1;\n\t\t\t\t\turl += '&b=';\n\t\t\t\t\turl += submission.data.input2;\n\t\t\t\t\t//alert('url = '+url);\n\t\t\t\t\t$.ajax({\n\t\t\t\t\t\turl: url,\n\t\t\t\t\t\tbeforeSend: function(xhrObj){\n\t\t\t\t\t\t\t//Request headers\n\t\t\t\t\t\t},\n\t\t\t\t\t\ttype: \"GET\"\n\t\t\t\t\t}).done(function(data){\n\t\t\t\t\t\t//console.log(data)\n\t\t\t\t\t\t//form.submission.data.result = data.result;\n\t\t\t\t\t\tvar value = JSON.stringify(data.Result); \n\t\t\t\t\t\tform.submission.data.result = data.result;\n\t\t\t\t\t\tconsole.log(value);   \n\t\t\t\t\t\tform.submission = { data: {result: value}};  \n\t\t\t\t\t}).fail(function(err){\n\t\t\t\t\t\tconsole.log(err)\n\t\t\t\t\t});","properties":{"":""},"conditional":{"eq":"","when":null,"show":""},"tags":[],"input":true,"label":"Submit","tableView":false,"key":"submit","size":"md","leftIcon":"","rightIcon":"","block":false,"action":"custom","disableOnInvalid":false,"theme":"primary","type":"button"}],"owner":"59b100556d85560007c28261","submissionAccess":[],"access":[{"type":"read_all","roles":["59b8a4bcf4e9c80007f66a7f","59b8a4bcf4e9c80007f66a80","59b8a4bcf4e9c80007f66a81"]}],"tags":[],"type":"form"};
+      		Formio.createForm(document.getElementById('formio'), formdata);
+    	};
+  	</script>
   </head>
   <body>
 		<div id='formio'></div>
