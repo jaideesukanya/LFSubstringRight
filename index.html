@@ -33,11 +33,7 @@
 						//form.submission.data.result = data.result;
 						var value = JSON.stringify(data.Result);   
 						console.log(value);   
-						form.submission = {
-						 data: {    
-								result: value  
-							}
-						};  
+						submission = { data: {result: value}};  
 					}).fail(function(err){
 						console.log(err)
 					});
