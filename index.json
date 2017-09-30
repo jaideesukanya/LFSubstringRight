@@ -1,2 +1,96 @@
 
-var formdata = {"_id":"59b8a56ad6365c00073fcdc4","machineName":"sbyqujankztvaxh:testCalcForm","modified":"2017-09-13T08:40:37.712Z","title":"testCalcForm","display":"form","name":"testCalcForm","action":"https://lfazuretestapi.portal.azure-api.net/add","path":"test","project":"59b8a4bcf4e9c80007f66a7e","created":"2017-09-13T03:26:34.942Z","components":[{"lockKey":true,"input":true,"tableView":true,"inputType":"text","inputMask":"","label":"A:","key":"input1","placeholder":"","prefix":"","suffix":"","multiple":false,"defaultValue":"","protected":false,"unique":false,"persistent":true,"hidden":false,"clearOnHide":true,"validate":{"required":false,"minLength":"","maxLength":"","pattern":"","custom":"","customPrivate":false},"conditional":{"show":"","when":null,"eq":""},"type":"textfield","tags":[],"properties":{"":""}},{"lockKey":true,"input":true,"tableView":true,"inputType":"text","inputMask":"","label":"B:","key":"input2","placeholder":"","prefix":"","suffix":"","multiple":false,"defaultValue":"","protected":false,"unique":false,"persistent":true,"hidden":false,"clearOnHide":true,"validate":{"required":false,"minLength":"","maxLength":"","pattern":"","custom":"","customPrivate":false},"conditional":{"show":"","when":null,"eq":""},"type":"textfield","tags":[],"properties":{"":""}},{"isNew":false,"input":true,"tableView":true,"inputType":"text","inputMask":"","label":"Result","key":"result","placeholder":"","prefix":"","suffix":"","multiple":false,"defaultValue":"","protected":false,"unique":false,"persistent":true,"hidden":false,"clearOnHide":true,"validate":{"required":false,"minLength":"","maxLength":"","pattern":"","custom":"","customPrivate":false},"conditional":{"show":"","when":null,"eq":""},"type":"textfield","tags":[],"properties":{"":""},"lockKey":true},{"input":true,"label":"Submit","tableView":false,"key":"submit","size":"md","leftIcon":"","rightIcon":"","block":false,"action":"submit","disableOnInvalid":false,"theme":"primary","type":"button"}],"owner":"59b100556d85560007c28261","submissionAccess":[],"access":[{"type":"read_all","roles":["59b8a4bcf4e9c80007f66a7f","59b8a4bcf4e9c80007f66a80","59b8a4bcf4e9c80007f66a81"]}],"tags":[],"type":"form"}
+var formdata =
+{
+  "_id": "59cc74c133ef1b00088c3f35",
+  "modified": "2017-09-29T08:52:01.254Z",
+  "title": "User Login",
+  "name": "userLogin",
+  "path": "user/login",
+  "machineName": "plwhhzhptjgiubn:userLogin",
+  "project": "59cc74c033ef1b00088c3f2f",
+  "display": "form",
+  "created": "2017-09-28T04:04:17.287Z",
+  "components": [
+    {
+      "kickbox": {
+        "enabled": false
+      },
+      "clearOnHide": true,
+      "hidden": false,
+      "input": true,
+      "tableView": true,
+      "inputType": "email",
+      "label": "Email",
+      "lockKey": true,
+      "key": "email",
+      "placeholder": "Enter your email address",
+      "prefix": "",
+      "suffix": "",
+      "defaultValue": "",
+      "protected": false,
+      "unique": false,
+      "persistent": true,
+      "type": "email"
+    },
+    {
+      "clearOnHide": true,
+      "hidden": false,
+      "input": true,
+      "tableView": false,
+      "inputType": "password",
+      "label": "Password",
+      "lockKey": true,
+      "key": "password",
+      "placeholder": "Enter your password.",
+      "prefix": "",
+      "suffix": "",
+      "protected": true,
+      "persistent": true,
+      "type": "password"
+    },
+    {
+      "lockKey": true,
+      "properties": {
+        "": ""
+      },
+      "conditional": {
+        "eq": "",
+        "when": null,
+        "show": ""
+      },
+      "tags": [],
+      "isNew": false,
+      "input": true,
+      "label": "Submit",
+      "tableView": false,
+      "key": "submit",
+      "size": "md",
+      "leftIcon": "",
+      "rightIcon": "",
+      "block": false,
+      "action": "submit",
+      "disableOnInvalid": true,
+      "theme": "primary",
+      "type": "button"
+    }
+  ],
+  "owner": null,
+  "submissionAccess": [
+    {
+      "type": "create_own",
+      "roles": [
+        "59cc74c033ef1b00088c3f32"
+      ]
+    }
+  ],
+  "access": [
+    {
+      "type": "read_all",
+      "roles": [
+        "59cc74c033ef1b00088c3f32"
+      ]
+    }
+  ],
+  "tags": [],
+  "type": "form"
+}
